@@ -14,3 +14,4 @@ pot_odds = pot_odds_calc(pot, bet)
 print("You need " + str(pot_odds *100) + "% equity to call the bet.") 
 
 #I got the formula from a lot of David Sklansky books, but you can also find the formula on the Poker Bank. 
+#I converted this into a percentage and then I use the rule of 2 and 4 to comaare my odds. 
