@@ -7,7 +7,7 @@ bet = float(input("What's the bet?  "))
 #This should give you the equity required to call the bet which is what you want. 
 
 def pot_odds_calc(p, b):
-    return b/(p + b*2) 
+    return b/(p + b) 
 
 pot_odds = pot_odds_calc(pot, bet)
 
