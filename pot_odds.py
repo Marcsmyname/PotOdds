@@ -1,17 +1,26 @@
-#pot odds calculator for one street
-
-
-
-pot = float(input("What is the pot size?  " )) 
-bet = float(input("What's the bet?  ")) 
-#This should give you the equity required to call the bet which is what you want. 
-
-def pot_odds_calc(p, b):
-    return b/(p + b) 
-
-pot_odds = pot_odds_calc(pot, bet)
-
-print("You need " + str(pot_odds *100) + "% equity to call the bet.") 
-
-#I got the formula from a lot of David Sklansky books, but you can also find the formula on the Poker Bank. 
-#I converted this into a percentage and then I use the rule of 2 and 4 to comaare my odds. 
+while True:
+    def pot_odds_calc(p, b):
+        return b/(p + b)
+    try:
+        pot = float(input("What's the current pot size?  " ))
+    except Exception:
+        print("Oh no! You're not a donk, but you accidently didn't use a number. Try again.  ")
+   
+    try:
+        bet = float(input("What's the current bet?  "))
+    except Exception:
+        print("Pot odds can only be calculated with numbers. Try again.  ")
+        #I need to fix this^^^ i need to raise the exception or something.  It will correct the first error but then it breaks with a second error.
+    if pot == 0.00:
+        break
+    elif bet == 0.00:
+        break
+    else:
+        pot_odds = pot_odds_calc(pot, bet)
+        #
+    print("You need " + str(pot_odds *100) + "% equity to call the bet.")
+    #how to end the program
+    if pot == 0.00:
+        break
+    elif bet == 0.00:
+        break
